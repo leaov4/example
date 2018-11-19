@@ -1,0 +1,286 @@
+body {
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden;
+ }
+
+.home {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	z-index: 6;
+	background-color: grey;
+	border-radius: 25px;
+	color: white;
+	padding: 10px;
+	opacity: .7;
+	text-decoration: none;
+}
+
+.container img {
+	width: 100%;
+}
+
+.container {
+	position: relative;
+
+	/*This would mainly affect only it's child elements, 
+	with position: absolute relative to this element now, not the HTML. */
+}
+
+.bottom-left {
+	position: absolute;
+    bottom: 8px;
+    left: 16px;
+    z-index: 5;
+}
+
+.intro-txt {
+	position: absolute;
+	z-index: 5;
+	top: 10%;
+	left: 10%;
+	z-index: 5;
+	font-size: 60px;
+	color: maroon;
+
+}
+
+.intro-txt2{
+	position: absolute;
+	z-index: 5;
+	top: 20%;
+	left: 20%;
+	font-size: 30px;
+	color: white;
+}
+
+
+
+.intro-txt:hover {
+	color: grey;
+}
+
+.intro-txt2:hover {
+	color: grey;
+}
+
+
+.col-txt p {
+	background-color: black;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+	position: relative;
+	/*top: -200px;
+	left: 10px;*/
+	color: white;
+	font-weight: bold;
+	opacity: .8;
+	
+
+}
+
+ .column {
+    width: 50%; /*Try 50%*/ 
+    display: inline-block;  /*default for span, allows for styling! set height and width*/
+    /*background: white;*/
+    float: left;
+
+  }
+
+.four-col {
+	width: 25%;
+	float: left;
+}
+
+.three-columns {
+	background: #602020;
+}
+
+.third-col {
+	width: 30%;
+	float: left;
+	align-items: center;
+    margin: 10px;
+
+}
+
+.third-col p {
+	text-align: center;
+	background-color: #f2f2f2;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #999999;
+	padding: 5px;
+}
+
+ img {
+ 	width: 100%;
+
+
+ }
+.hoverme {
+ 	position: relative;
+
+ }
+ .two-col {
+ 	width: 100%;
+ }
+
+ .clearfix {
+ 	overflow: auto;
+ }
+
+.clearfix::after {
+	content: "";
+    clear: both;
+    display: table;
+}
+
+
+ .overlay {
+  position: absolute;
+  opacity: .7;
+  /*bottom: 0;*/
+  left: 100%;
+  /*right: 0;*/
+  background-color: grey;
+  overflow: hidden; /*hides overflow*/
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+ .overlay-txt {
+ 	position: absolute;
+ 	top: 40%;
+    left: 40%;
+ 	color: white;
+ }
+
+.hoverme:hover .overlay{
+	width: 100%;
+	left: 0;
+}
+
+.overlay-left {
+	right: 100%;
+	left: 0;
+}
+
+.hoverme:hover .overlay-left {
+	width: 100%;
+	right: 0;
+}
+
+/*top | right | bottom | left. for padding*/ 
+
+  
+ .four-col {
+ 	position: relative;
+ }
+
+.four-coloverlay{
+	position: absolute;
+	background-color: grey;
+	opacity: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+    width: 100%;
+    transition: .5s ease;
+
+}
+
+
+.four-col:hover .four-coloverlay{
+	opacity: .7;
+}
+.dropdown {
+    position: absolute;
+    display: inline-block;
+   
+
+   
+}
+
+.mobile {
+	display: none;
+}
+
+@media (max-width: 738px) {
+
+	.column {
+		width: 100%;
+	}
+
+	.mobile {
+		display: initial;
+	}
+
+	.desktop {
+		display: none;
+	}
+
+	.intro-txt2{
+		top: 30%;
+	}
+
+	.third-col {
+		width: 100%;
+	}
+	.three-columns {
+		margin-right: 20px;
+	}
+
+}
+
+/*drop down items*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 6;
+}
+
+  .dropbtn {
+  	position: sticky;
+	background-color: transparent;
+    color: black;
+    padding: 15px;
+   
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    
+    z-index: 6;
+  
+  }
+
+/*Refers to specific dropdown element, sets text color and style*/
+.dropdown-content a {
+    color: black;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: block; /*stacks elements*/
+    
+}
+
+.dropdown-content a:hover {background-color: grey}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    
+}
+
+.dropdown:hover .dropbtn {
+    background-color: lightblue;
+}
+
+  
